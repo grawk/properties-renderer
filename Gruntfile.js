@@ -35,17 +35,12 @@ module.exports = function (grunt) {
                 ui: 'bdd',
                 reporter: 'spec'
             }
-        },
-        clean: {
-            'tmp': '/tmp/kraken*',
-            'build': 'test/fixtures/.build'
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('test', ['jshint', 'mochaTest', 'clean']);
+    grunt.registerTask('test', ['jshint', 'mochaTest']);
 
 };
